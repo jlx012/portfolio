@@ -30,10 +30,39 @@ const Navbar = ({ selectedPage, setSelectedPage }) => {
                 {/* Desktop Nav */}
                 {isAboveSmallScreens ? (
                     <div className="flex justfiy-between gap-16 font-opensans text-sm font-semibold">
-
+                        <Link 
+                            page="Home"
+                            selectedPage={selectedPage}
+                            setSelectedPage={setSelectedPage}
+                        />
+                        <Link 
+                            page="Skills"
+                            selectedPage={selectedPage}
+                            setSelectedPage={setSelectedPage}
+                        />
+                        <Link 
+                            page="Projects"
+                            selectedPage={selectedPage}
+                            setSelectedPage={setSelectedPage}
+                        />
+                        <Link 
+                            page="Resume"
+                            selectedPage={selectedPage}
+                            setSelectedPage={setSelectedPage}
+                        />
+                        <Link 
+                            page="Contact"
+                            selectedPage={selectedPage}
+                            setSelectedPage={setSelectedPage}
+                        />
                     </div>
-                ) : (<div></div>)}
+                ) : (<button className="rounded-full bg-red p-2" onClick={() => setIsMenuToggled(!isMenuToggled)}>
+                        <img alt="menu-icon" src="../assets/menu-icon.svg" />
+                    </button>)
+                }
             </div>
         </nav>
     )
 }
+
+export default Navbar;

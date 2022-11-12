@@ -21,7 +21,7 @@ const Link = ({ page, selectedPage, setSelectedPage }) => {
 const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
     const [ isMenuToggled, setIsMenuToggled ] = useState(false);
     const isAboveSmallScreens = useMediaQuery("(min-width: 786px)");
-    const navBarBackground = isTopOfPage ? "" : "bg-grey";
+    const navBarBackground = isTopOfPage ? "" : "bg-sky-700";
 
     return (
         <nav className={`${ navBarBackground } z-40 w-full fixed top-0 py-6`}>
@@ -70,7 +70,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
                                 <img alt="close-icon" src="../assets/close-icon.svg"/>
                             </button>
                         </div>
-                        <div className="flex flex-col gap-10 ml-[33%] text-2xl text-deep-blue">
+                        <div className="flex flex-col gap-10 ml-[33%] text-2xl text-gray-800">
                             <Link 
                                 page="Home"
                                 selectedPage={selectedPage}
